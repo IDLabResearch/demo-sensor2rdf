@@ -1,0 +1,9 @@
+{
+  "modules": [
+    {
+      "type":"climate",
+      "port": "A",
+      "interval": 3000
+    }
+  ]
+}

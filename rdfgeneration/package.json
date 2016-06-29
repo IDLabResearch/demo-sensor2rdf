@@ -1,5 +1,5 @@
 {
-  "name": "demo-sensor2rdf",
+  "name": "demo-sensor2rdf-rdfgeneration",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,6 @@
   "author": "Pieter Heyvaert",
   "license": "MIT",
   "dependencies": {
-    "tessel2json": "git+ssh://git@git.mmlab.be:pheyvaer/tessel2json.git",
     "tessel2rdf": "git+ssh://git@git.mmlab.be:pheyvaer/tessel2rdf.git",
     "split": "^1.0.0"
   }

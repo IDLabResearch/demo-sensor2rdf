@@ -38,7 +38,7 @@ map:ClimateMapping
 
 map:LocationMapping
   rml:logicalSource [
-    rml:source "http://localhost:9876/locations.xml";
+    rml:source "/home/pieter/Developer/demo-sensor2rdf/server/locations.xml";
     rml:referenceFormulation ql:XPath;
     rml:iterator "/sensors/sensor" ];
 
@@ -52,8 +52,6 @@ map:LocationMapping
   rr:predicateObjectMap [
     rr:predicate ex:lon;
     rr:objectMap [ rml:reference "lon" ] ] .
-
-
 
 map:AmbientMapping
   ex:useWithTesselModule "ambient";

@@ -20,6 +20,7 @@
     "dbpedia-owl": "http://dbpedia.org/ontology/",
     "dbpprop":     "http://dbpedia.org/property/",
     "hydra":       "http://www.w3.org/ns/hydra/core#",
-    "void":        "http://rdfs.org/ns/void#"
+    "void":        "http://rdfs.org/ns/void#",
+    "map":         "http://www.example.com/pieter/"
   }
 }

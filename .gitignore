@@ -4,3 +4,4 @@ climate-si7020.json
 climate.json
 *~
 *.sparql
+*.swp

@@ -12,7 +12,7 @@ send-keys -t 2 "cd rdfgeneration/node_modules/tessel2rdf/ && clear && export PS1
 send-keys -t 2 "tail -f climate-si7020.json.log" enter
 
 # Application
-send-keys -t 3 "cd datacapture && clear && export PS1='RDF Generation$ '" enter
+send-keys -t 3 "cd datacapture && clear && export PS1='RDF Generation$ ' && sleep 5" enter
 send-keys -t 3 "tessel run index.js | node ../rdfgeneration/index.js" enter
 
 # RML Mappings

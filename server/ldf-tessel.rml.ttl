@@ -24,9 +24,36 @@ map:ClimateMapping
     rr:predicate dbpedia-owl:temperature;
     rr:objectMap [ rml:reference "temperature.value" ] ] ;
 
-    rr:predicateObjectMap [
-      rr:predicate datex:humidity;
-      rr:objectMap [ rml:reference "humidity.value" ] ] .
+  rr:predicateObjectMap [
+    rr:predicate datex:humidity;
+    rr:objectMap [ rml:reference "humidity.value" ] ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ex:location;
+    rr:objectMap [ 
+      rr:parentTriplesMap <map:LocationMapping>;
+      rr:joinCondition [
+        rr:child "device";
+        rr:parent "/sensors/sensor/@id" ] ] ] .
+
+map:LocationMapping
+  rml:logicalSource [
+    rml:source "http://localhost:9876/locations.xml";
+    rml:referenceFormulation ql:XPath;
+    rml:iterator "/sensors/sensor" ];
+
+  rr:subjectMap [
+    rr:template "http://www.example.com/loc/{lat}_{lon}"];
+
+  rr:predicateObjectMap [
+    rr:predicate ex:lat;
+    rr:objectMap [ rml:reference "lat" ] ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ex:lon;
+    rr:objectMap [ rml:reference "lon" ] ] .
+
+
 
 map:AmbientMapping
   ex:useWithTesselModule "ambient";

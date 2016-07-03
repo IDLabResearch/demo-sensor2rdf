@@ -7,6 +7,8 @@
 @prefix datex: <http://vocab.datex.org/terms#> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dicom: <http://purl.org/healthcarevocab/v1#> .
+@prefix schema: <http://www.schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 map:ClimateMapping
   ex:useWithTesselModule "climate-si7020";
@@ -29,8 +31,8 @@ map:ClimateMapping
     rr:objectMap [ rml:reference "humidity.value" ] ] ;
 
   rr:predicateObjectMap [
-    rr:predicate ex:location;
-    rr:objectMap [ 
+    rr:predicate schema:location;
+    rr:objectMap [
       rr:parentTriplesMap <map:LocationMapping>;
       rr:joinCondition [
         rr:parent "id";
@@ -46,11 +48,11 @@ map:LocationMapping
     rr:template "http://www.example.com/loc/{lat}_{lon}"];
 
   rr:predicateObjectMap [
-    rr:predicate ex:lat;
+    rr:predicate geo:lat;
     rr:objectMap [ rml:reference "lat" ] ] ;
 
   rr:predicateObjectMap [
-    rr:predicate ex:lon;
+    rr:predicate geo:long;
     rr:objectMap [ rml:reference "lon" ] ] .
 
 map:AmbientMapping
@@ -86,5 +88,13 @@ map:RFIDMapping
     rr:class saref:Sensor ];
 
   rr:predicateObjectMap [
-    rr:predicate ex:accessedBy;
-    rr:objectMap [ rml:reference "uid" ] ] .
+    rr:predicate dbpedia-owl:access ;
+    rr:objectMap [ rml:reference "uid" ] ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:location;
+        rr:objectMap [
+          rr:parentTriplesMap <map:LocationMapping>;
+          rr:joinCondition [
+            rr:parent "id";
+            rr:child "device" ] ] ] .

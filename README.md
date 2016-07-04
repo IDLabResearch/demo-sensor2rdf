@@ -13,3 +13,8 @@ Run `./install.sh`.
 ## Run
 
 `tmux start-server \; source windows.tmux`
+
+
+## License
+
+MIT

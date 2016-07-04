@@ -9,6 +9,6 @@
   "author": "Pieter Heyvaert",
   "license": "MIT",
   "dependencies": {
-    "tessel2json": "git+ssh://git@git.mmlab.be:pheyvaer/tessel2json.git"
+    "tessel2json": "git://github.com/mmlab/tessel2json.git"
   }
 }

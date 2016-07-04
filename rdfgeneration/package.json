@@ -9,7 +9,7 @@
   "author": "Pieter Heyvaert",
   "license": "MIT",
   "dependencies": {
-    "tessel2rdf": "git+ssh://git@git.mmlab.be:pheyvaer/tessel2rdf.git",
+    "tessel2rdf": "git://github.com/mmlab/tessel2rdf.git",
     "split": "^1.0.0"
   }
 }
